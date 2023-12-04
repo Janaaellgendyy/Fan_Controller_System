@@ -2,7 +2,7 @@
  *
  * Module: Fan Controller System
  *
- * File Name:FanController_system.h
+ * File Name:FanController_system.c
  *
  * Description: Temperature controlled fan using ATMEGA32 MicroController,
  * where the fan automatically turns ON or OFF according to the temperature.
