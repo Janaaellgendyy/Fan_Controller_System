@@ -1,0 +1,54 @@
+/*
+ * FanController_system.c
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: janaw
+ */
+
+#include "ADC.h"
+#include "DC_Motor.h"
+#include "lcd.h"
+
+#define ROW_0 0
+#define ROW_1 1
+#define COLUMN_0 0
+
+
+
+int main(void){
+
+	ADC_ConfigType ADC_Configs = {INTERNAL_VOLTAGE_REFERENCE, ADC_Factor_8};
+	uint16 temp;
+
+	ADC_init(&ADC_Configs);
+
+	LCD_init();
+
+	DcMotor_Init();
+
+	LCD_displayStringRowColumn(ROW_0,COLUMN_0,"LCD - Keypad 4x4");
+
+		LCD_moveCursor(1,0); /* Move the cursor to the second row */
+
+		while(1){
+
+		   temp = LM35_GetTemperature();
+
+		   LCD_moveCursor(0,7);
+
+		   if(temp >= 100){
+
+			   LCD_intgerToString(temp);
+		   }
+		   else{
+
+			   LCD_intgerToString(temp);
+
+			   LCD_displayCharacter(' ');
+		   }
+		}
+	}
+
+	if()
+
+}

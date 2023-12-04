@@ -1,0 +1,93 @@
+/*
+ * Name: Fan Controller Project
+ * Author: Jana Wael
+ *
+ * Description:  design a temperature controlled fan using micro controller,
+ * where the fan automatically turns ON or OFF according to the temperature.
+ *
+ *  Created on: Oct 11, 2023
+
+ */
+
+#include "ADC.h"
+#include "DC_Motor.h"
+#include "lcd.h"
+#include "lm35_sensor.h"
+
+#define ROW_0 0
+#define ROW_1 1
+#define COLUMN_0 0
+
+
+
+int main(void){
+
+	uint8 temp;
+
+	/* Create configuration structure for The ICU driver */
+
+	ADC_ConfigType ADC_Configs = {INTERNAL_VOLTAGE_REFERENCE, ADC_Factor_8};
+
+	/* Call initialization function of ADC driver */
+
+	ADC_init(&ADC_Configs);
+
+	/* Call initialization function of LCD driver */
+
+	LCD_init();
+
+	/* Call initialization function of DC Motor driver */
+
+	DcMotor_Init();
+
+	/* Display the string "Fan is " only once at first row*/
+
+	LCD_displayStringRowColumn(ROW_0,COLUMN_0,"Fan is  ");
+
+	LCD_moveCursor(1,0); /* Move the cursor to the second row */
+
+	LCD_displayStringRowColumn(ROW_1,COLUMN_0,"Temp =    C"); 	/* Display the string "Fan is " only once at second row*/
+
+		while(1){
+
+		   temp = LM35_GetTemperature();
+
+		   LCD_moveCursor(1,7);
+		   LCD_intgerToString(temp);
+		   LCD_displayCharacter(' ');
+
+		   if(temp < 30){
+
+			   LCD_moveCursor(1, 7);
+			   DcMotor_Rotate(STOP, 0);
+			   LCD_moveCursor(0, 7);
+			   LCD_displayString("OFF");
+		   }
+		   else if(temp >= 30 && temp < 60){
+
+			   LCD_moveCursor(1, 7);
+			   DcMotor_Rotate(CW, 25);
+			   LCD_moveCursor(0,7);
+			   LCD_displayString("ON");
+			   LCD_displayCharacter(' ');
+		   }
+		   else if(temp >= 60 && temp < 90){
+
+			   LCD_moveCursor(1, 7);
+			   DcMotor_Rotate(CW, 50);
+			   LCD_moveCursor(0,7);
+			   LCD_displayString("ON");
+			   LCD_displayCharacter(' ');
+		   }
+		   else if(temp >= 90){
+
+			   LCD_moveCursor(1, 7);
+			   DcMotor_Rotate(CW, 100);
+			   LCD_moveCursor(0,7);
+			   LCD_displayString("ON");
+			   LCD_displayCharacter(' ');
+
+		   }
+		}
+	}
+

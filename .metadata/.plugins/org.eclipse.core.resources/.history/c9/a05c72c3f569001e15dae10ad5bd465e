@@ -1,0 +1,46 @@
+/*
+ * FanController_system.c
+ *
+ *  Created on: Oct 11, 2023
+ *      Author: janaw
+ */
+
+#include "ADC.h"
+#include "DC_Motor.h"
+#include "lcd.h"
+
+
+
+int main(void){
+
+	ADC_ConfigType ADC_Val = {ADC_ReferenceVolt, ADC_Factor_8};
+	uint16 temp;
+
+	LCD_init();
+	ADC_init(ADC_Val);
+	DcMotor_Init();
+
+	LCD_displayStringRowColumn("Temp =    C");
+
+		while(1){
+
+		   temp = LM35_GetTemperature();
+
+		   LCD_moveCursor(0,7);
+
+		   if(temp >= 100){
+
+			   LCD_intgerToString(temp);
+		   }
+		   else{
+
+			   LCD_intgerToString(temp);
+
+			   LCD_displayCharacter(' ');
+		   }
+		}
+	}
+
+	if()
+
+}

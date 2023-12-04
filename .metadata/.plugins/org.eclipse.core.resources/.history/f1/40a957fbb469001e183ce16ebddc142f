@@ -1,0 +1,38 @@
+/*
+ * ADC.h
+ *
+ *  Created on: Oct 6, 2023
+ *      Author: janaw
+ */
+
+#include "std_types.h"
+
+#ifndef ADC_H_
+#define ADC_H_
+
+#define ADC_MAXIMUM_VALUE 1023
+
+typedef enum {
+
+	AREF , AVCC , RESERVED , INTERNAL_VOLTAGE_REFERENCE
+
+}ADC_ReferenceVolatge;
+
+typedef enum{
+
+	ADC_Factor_2_1, ADC_Factor_2_2, ADC_Factor_4, ADC_Factor_8,
+	ADC_Factor_16, ADC_Factor_32, ADC_Factor_64, ADC_Factor_128
+
+}ADC_Prescaler;
+
+typedef struct{
+ ADC_ReferenceVolatge ref_volt;
+ ADC_Prescaler prescaler;
+}ADC_ConfigType;
+
+
+void ADC_init(void);
+uint16 ADC_readChannel(uint8 channel_num);
+
+
+#endif /* ADC_H_ */

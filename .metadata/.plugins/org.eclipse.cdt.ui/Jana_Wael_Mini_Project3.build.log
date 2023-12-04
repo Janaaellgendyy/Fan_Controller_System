@@ -1,0 +1,34 @@
+11:41:49 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9560 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+11:41:49 Build Finished. 0 errors, 0 warnings. (took 525ms)
+

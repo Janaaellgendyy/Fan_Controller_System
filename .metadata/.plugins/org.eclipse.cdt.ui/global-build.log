@@ -1,0 +1,451 @@
+22:42:08 **** Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../ADC.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ADC.d" -MT"ADC.o" -c -o "ADC.o" "../ADC.c"
+Finished building: ../ADC.c
+ 
+Building file: ../DC_Motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DC_Motor.d" -MT"DC_Motor.o" -c -o "DC_Motor.o" "../DC_Motor.c"
+../DC_Motor.c: In function 'DcMotor_Rotate':
+../DC_Motor.c:53: warning: implicit declaration of function 'PWM_Timer0_Start'
+Finished building: ../DC_Motor.c
+ 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building file: ../PWM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"PWM.d" -MT"PWM.o" -c -o "PWM.o" "../PWM.c"
+Finished building: ../PWM.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../lcd.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+In file included from ../lm35_sensor.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../lm35_sensor.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9522 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+22:58:58 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../DC_Motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DC_Motor.d" -MT"DC_Motor.o" -c -o "DC_Motor.o" "../DC_Motor.c"
+../DC_Motor.c: In function 'DcMotor_Rotate':
+../DC_Motor.c:53: warning: implicit declaration of function 'PWM_Timer0_Start'
+Finished building: ../DC_Motor.c
+ 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9522 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:23:01 **** Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../ADC.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"ADC.d" -MT"ADC.o" -c -o "ADC.o" "../ADC.c"
+Finished building: ../ADC.c
+ 
+Building file: ../DC_Motor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"DC_Motor.d" -MT"DC_Motor.o" -c -o "DC_Motor.o" "../DC_Motor.c"
+Finished building: ../DC_Motor.c
+ 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building file: ../PWM.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"PWM.d" -MT"PWM.o" -c -o "PWM.o" "../PWM.c"
+Finished building: ../PWM.c
+ 
+Building file: ../gpio.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"gpio.d" -MT"gpio.o" -c -o "gpio.o" "../gpio.c"
+Finished building: ../gpio.c
+ 
+Building file: ../lcd.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lcd.d" -MT"lcd.o" -c -o "lcd.o" "../lcd.c"
+In file included from ../lcd.c:13:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../lcd.c
+ 
+Building file: ../lm35_sensor.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"lm35_sensor.d" -MT"lm35_sensor.o" -c -o "lm35_sensor.o" "../lm35_sensor.c"
+In file included from ../lm35_sensor.c:15:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+Finished building: ../lm35_sensor.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9518 bytes (29.0% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:27:35 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9578 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:29:58 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9580 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (14.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:30:41 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9548 bytes (29.1% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:35:48 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9568 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (14.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:36:17 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9566 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:37:14 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9572 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:40:12 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+../FanController_system.c: In function 'main':
+../FanController_system.c:58: warning: passing argument 1 of 'LCD_intgerToString' makes integer from pointer without a cast
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9588 bytes (29.3% Full)
+(.text + .data + .bootloader)
+
+Data:        294 bytes (14.4% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:40:42 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9584 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+11:41:49 **** Incremental Build of configuration Debug for project Jana_Wael_Mini_Project3 ****
+make all 
+Building file: ../FanController_system.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega32 -DF_CPU=1000000UL -MMD -MP -MF"FanController_system.d" -MT"FanController_system.o" -c -o "FanController_system.o" "../FanController_system.c"
+Finished building: ../FanController_system.c
+ 
+Building target: Jana_Wael_Mini_Project3.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Jana_Wael_Mini_Project3.map -mmcu=atmega32 -o "Jana_Wael_Mini_Project3.elf"  ./ADC.o ./DC_Motor.o ./FanController_system.o ./PWM.o ./gpio.o ./lcd.o ./lm35_sensor.o   
+Finished building target: Jana_Wael_Mini_Project3.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Jana_Wael_Mini_Project3.elf  >"Jana_Wael_Mini_Project3.lss"
+Finished building: Jana_Wael_Mini_Project3.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega32 Jana_Wael_Mini_Project3.elf
+AVR Memory Usage
+----------------
+Device: atmega32
+
+Program:    9560 bytes (29.2% Full)
+(.text + .data + .bootloader)
+
+Data:        292 bytes (14.3% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 

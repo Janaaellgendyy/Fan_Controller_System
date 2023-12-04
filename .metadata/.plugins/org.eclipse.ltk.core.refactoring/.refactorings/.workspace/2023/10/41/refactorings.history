@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete 10 resources" deleteContents="false" description="Delete 10 resources" element1="/Jana_Wael_Mini_Project3/adc.c" element10="/Jana_Wael_Mini_Project3/std_types.h" element2="/Jana_Wael_Mini_Project3/adc.h" element3="/Jana_Wael_Mini_Project3/common_macros.h" element4="/Jana_Wael_Mini_Project3/gpio.c" element5="/Jana_Wael_Mini_Project3/gpio.h" element6="/Jana_Wael_Mini_Project3/lcd.c" element7="/Jana_Wael_Mini_Project3/lcd.h" element8="/Jana_Wael_Mini_Project3/lm35_sensor.c" element9="/Jana_Wael_Mini_Project3/lm35_sensor.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="10" stamp="1697050448265"/>
+</session>

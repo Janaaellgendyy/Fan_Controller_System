@@ -1,0 +1,25 @@
+/*
+ * lm35_sensor.c
+ *
+ *  Created on: Oct 6, 2023
+ *      Author: janaw
+ */
+
+
+#include "ADC.h"
+#include <util/delay.h>
+#include "lm35_sensor.h"
+
+
+uint8 LM35_GetTemperature(void){
+
+	uint8 tempValue = 0;
+
+	uint16 adcValue = 0;
+
+	adcValue = ADC_readChannel(SENSOR_CHANNEL_ID);
+
+	tempValue = (uint8)(((uint32)adcValue * SENSOR_MAX_TEMPERATURE * ADC_Reference_Volt) / (ADC_MAXIMUM_VALUE * SENSOR_MAX_VOLT));
+
+	return tempValue;
+}
